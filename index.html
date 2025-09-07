@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tenna Clicker</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <audio id="background-music" loop autoplay muted src="audio/tvtime.mp3"></audio>
+    <div id="menu-screen" role="dialog" aria-modal="true" aria-labelledby="menu-title">
+        <div class="menu-content">
+            <h1 id="menu-title">Tenna Clicker</h1>
+            <button id="play-button" aria-label="Play Tenna Clicker">Play</button>
+        </div>
+        <div class="menu-qa" aria-hidden="true">
+            Q: Why do you have a menu screen?<br>
+            A: Most browsers do not support play audio on entering the website, so I wanted to make it more fancy so I added a menu
+        </div>
+    </div>
+    <div class="game-container">
+        <div class="header">
+            <button id="mute-button">Mute</button>
+            <h1>Tenna Clicker</h1>
+            <div class="score-container">
+                <span id="score">0</span> T
+                <div class="score-per-second">per second: <span id="scorePerSecond">0</span></div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="clicker-container">
+                <div id="tenna" class="clickable">
+                    <img src="images/tenna.gif" alt="Tenna" id="tenna-img">
+                    <div class="click-effect"></div>
+                </div>
+                <div class="click-value">+<span id="clickValue">1</span> T</div>
+            </div>
+
+            <div class="upgrades">
+                <h2>Upgrades</h2>
+                <div id="upgrades-container" class="upgrades-container">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/game.js"></script>
+</body>
+</html>
